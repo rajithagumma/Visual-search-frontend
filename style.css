@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+  #gameArea {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-color: #000;
+  }
+  
+  .stimulus {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .instruction-text {
+    margin-top: 10px;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+
+  }
+  .instructionScreen{
+    background-color:black;
+  }
+  
+  .main-container {
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    height: 600px;
+  }
+  
+  #startBtn {
+    background-color: gray;
+    color: white;
+    font-size: 18px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #startBtn:hover {
+    background-color: gray;
+  }
+  
+  
