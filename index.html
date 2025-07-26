@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visual Search Trial</title>
+  <style>
+    body {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #gameArea {
+      position: relative;
+      width: 800px;
+      height: 600px;
+      background-color: #000;
+      border: 3px solid #fff;
+    }
+    .stimulus {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+    }
+    /* .box {
+      background-color: white;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+    } */
+  </style>
+</head>
+<body>
+  <div id="gameArea"></div>
+
+  <script>
+    const trialData = [
+      { type: "target", x: 50, y: 50 },
+      { type: "distractor2", x: 0, y: -100 },
+      { type: "distractor1", x: -100, y: 0 },
+      { type: "distractor1", x: 0, y: 100 },
+      { type: "distractor1", x: -100, y: 50 },
+      // 11 empty placeholders
+      ...Array(11).fill({ type: "empty", x: 250, y: 250 })
+    ];
+
+    const gameArea = document.getElementById("gameArea");
+    const centerX = 800 / 2;
+    const centerY = 600 / 2;
+
+    trialData.forEach(({ type, x, y }) => {
+      const el = document.createElement("div");
+      el.classList.add("stimulus");
+
+      // Position relative to center
+      el.style.left = `${centerX + x - 20}px`; // -20 for centering 40px width
+      el.style.top = `${centerY - y - 20}px`; // -20 for centering 40px height
+
+      // Image or fallback
+      const img = document.createElement("img");
+      img.src = `images/${type}.png`;  // will load empty.png if type is "empty"
+      img.alt = type;
+      img.width = 40;
+      img.height = 40;
+      el.appendChild(img);
+
+
+      gameArea.appendChild(el);
+    });
+  </script>
+</body>
+</html>
