@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,20 +8,21 @@
 </head>
 <body>
 
-  <div class="main-container">
+  <div class="main-container" id="cbox">
     <div id="instructionScreen" style="display: none;">
-      <img src="images/aims.png" alt="Instruction" width="800" height="526">
+      <img src="images/aims.png" alt="Instruction" />
+      <button id="fullscreenBtn">⛶</button>
     </div>
     <div id="gameArea" style="display: none;"></div>
-
+    <div id="feedbackBox" style="display: none;"></div>
   </div>
+  
 
   <div id="startScreen">
     <button id="startBtn" class="instruction-text">
       Click this button to start the experiment in the black box above this button.
     </button>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>

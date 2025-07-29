@@ -1,56 +1,120 @@
+/* ------------------------------
+   Global Styles
+------------------------------ */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-  #gameArea {
-    position: relative;
-    width: 800px;
-    height: 600px;
-    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #222;
   }
   
-  .stimulus {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-  }
-  
-  .instruction-text {
-    margin-top: 10px;
-    font-size: 18px;
-    padding: 10px 20px;
-    cursor: pointer;
-
-  }
-  .instructionScreen{
-    background-color:black;
-  }
-  
+  /* ------------------------------
+     Main Container
+  ------------------------------ */
   .main-container {
     display: flex;
+    flex-direction: column;
     align-items: center;  
     justify-content: center; 
     text-align: center;
     padding: 20px;
     background-color: black;
     height: 600px;
+    width: 800px;
+    margin: 10px;
+  }
+  
+  /* ------------------------------
+     Game Area
+  ------------------------------ */
+  #gameArea {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:black;
+    position: relative;
+  }
+  
+  /* Stimulus positioning */
+  .stimulus {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* ------------------------------
+     Instruction Screen & Image
+  ------------------------------ */
+  #instructionScreen {
+    display: none;
+    background-color: black;
+  }
+  
+  .img {
+    width: 800px;
+    height: 500px;
+  }
+  
+  /* ------------------------------
+     Buttons
+  ------------------------------ */
+  .instruction-text,
+  #startBtn {
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
   }
   
   #startBtn {
-    background-color: gray;
-    color: white;
-    font-size: 18px;
-    padding: 10px 25px;
+    background-color: #DCDCDC;
     border: none;
     border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin-left: 10px;
   }
   
   #startBtn:hover {
-    background-color: gray;
+    background-color: #DCDCDC; /* Same as default, you can change if needed */
   }
   
+  /* Fullscreen Button */
+  #fullscreenBtn {
+    position: absolute;
+    bottom: 210px;
+    left: 510px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  /* Fullscreen image sizing */
+  :fullscreen img {
+    width: 80vw;
+    object-fit: contain;
+  }
+  
+  /* ------------------------------
+     Feedback Box
+  ------------------------------ */
+  #feedbackBox {
+    width: 20%;
+    background-color: gray;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+  }
   
