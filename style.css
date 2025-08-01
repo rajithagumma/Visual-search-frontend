@@ -1,0 +1,12 @@
+  #stimuliContainer {
+      position: relative;
+      width: 800px;
+      height: 600px;
+      border: 1px solid black;
+      background-color: black;
+      margin: auto;
+  }
+
+  .stimulus {
+      position: absolute;
+  }
